@@ -1,34 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   testt.cpp                                          :+:      :+:    :+:   */
+/*   phoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akoaik <akoaik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/16 19:41:00 by akoaik            #+#    #+#             */
-/*   Updated: 2025/12/17 20:48:02 by akoaik           ###   ########.fr       */
+/*   Created: 2025/12/17 21:15:13 by akoaik            #+#    #+#             */
+/*   Updated: 2025/12/17 21:33:08 by akoaik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-class person {
-   
-    // data fields 
-    private : int age ;
-
-    // constructor
-    public : person (int age)
-    {
-        this->age = age ;
-    }
-} ;
-
-person creatPerson ()
+class phoneBook
 {
-    person p(12) ;
-    return p ;
-}
-
-int main ()
-{
-    person p = creatPerson();
-}
+    void *content;
+    
+};
