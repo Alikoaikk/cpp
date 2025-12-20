@@ -1,34 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   testt.cpp                                          :+:      :+:    :+:   */
+/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akoaik <akoaik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/16 19:41:00 by akoaik            #+#    #+#             */
-/*   Updated: 2025/12/17 20:48:02 by akoaik           ###   ########.fr       */
+/*   Created: 2025/12/17 21:15:13 by akoaik            #+#    #+#             */
+/*   Updated: 2025/12/20 06:04:44 by akoaik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-class person {
-   
-    // data fields 
-    private : int age ;
+#ifndef PHONEBOOK_HPP
+#define PHONEBOOK_HPP
 
-    // constructor
-    public : person (int age)
-    {
-        this->age = age ;
-    }
-} ;
+#include "Contacts.hpp"
 
-person creatPerson ()
-{
-    person p(12) ;
-    return p ;
-}
+class PhoneBook {
+    private:
+        Contacts contacts[8];
+        int nextIndex;
+        int count;
 
-int main ()
-{
-    person p = creatPerson();
-}
+    public:
+        PhoneBook();
+        void addContact(const Contacts& contact);
+};
+
+#endif
