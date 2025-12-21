@@ -1,29 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
+/*   phoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akoaik <akoaik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/20 03:45:38 by akoaik            #+#    #+#             */
-/*   Updated: 2025/12/20 06:04:29 by akoaik           ###   ########.fr       */
+/*   Created: 2025/12/17 21:15:13 by akoaik            #+#    #+#             */
+/*   Updated: 2025/12/21 21:28:01 by akoaik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PhoneBook.hpp"
+#ifndef phoneBook_HPP
+#define phoneBook_HPP
 
-PhoneBook::PhoneBook()
-    : nextIndex(0),
-      count(0)
-{}
+#include "Contacts.hpp"
 
-void PhoneBook::addContact(const Contacts& contact)
-{
-    contacts[nextIndex] = contact;
+class phoneBook {
+    private:
+        Contacts contacts[8];
+        int nextIndex;
+        int count;
 
-    if (count < 8)
-        count++;
-    nextIndex++;
-    if (nextIndex == 8)
-        nextIndex = 0;
-}
+    public:
+        phoneBook();
+        
+        void addContact(const Contacts& contact);
+
+        const int getCount() const ;
+        const Contacts& getContact(int index) const ;
+        
+        
+};
+
+#endif
