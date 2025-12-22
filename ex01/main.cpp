@@ -6,12 +6,13 @@
 /*   By: akoaik <akoaik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/18 20:51:58 by akoaik            #+#    #+#             */
-/*   Updated: 2025/12/21 20:03:44 by akoaik           ###   ########.fr       */
+/*   Updated: 2025/12/22 15:45:58 by akoaik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <string>
+#include "search.cpp"
 #include "phoneBook.hpp"
 #include "Contacts.hpp"
 
@@ -63,7 +64,7 @@ int main()
         }
         else if (command == "SEARCH")
         {
-            
+            search(pb);
         }
         else if (command == "EXIT")
         {

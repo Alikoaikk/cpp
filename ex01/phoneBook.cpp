@@ -6,7 +6,7 @@
 /*   By: akoaik <akoaik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/20 03:45:38 by akoaik            #+#    #+#             */
-/*   Updated: 2025/12/21 21:26:00 by akoaik           ###   ########.fr       */
+/*   Updated: 2025/12/22 14:15:59 by akoaik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,5 @@ void phoneBook::addContact(const Contacts& contact)
         nextIndex = 0;
 }
 
-const int phoneBook::getCount() const { return count; }
+int phoneBook::getCount() const { return count; }
 const Contacts& phoneBook::getContact(int index) const { return contacts[index]; }
