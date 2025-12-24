@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: akoaik <akoaik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/22 23:09:50 by akoaik            #+#    #+#             */
-/*   Updated: 2025/12/24 20:30:19 by akoaik           ###   ########.fr       */
+/*   Created: 2025/12/24 20:30:31 by akoaik            #+#    #+#             */
+/*   Updated: 2025/12/24 20:30:46 by akoaik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,21 @@
 #define ZOMBIE_HPP
 
 #include <iostream>
+#include <string>
 
-class Zombie 
-{
-    private : 
-        std::string name ; 
-        
-    public : 
-        Zombie(std::string name);
-        ~Zombie();
-        
-        void announce(void);
+class Zombie {
+private:
+    std::string name;
+
+public:
+    Zombie();
+    Zombie(std::string name);
+    ~Zombie();
+
+    void announce(void);
+    void setName(std::string name);
 };
 
-Zombie* newZombie(std::string name);
-void randomChump(std::string name);
+Zombie* zombieHorde(int N, std::string name);
 
 #endif
