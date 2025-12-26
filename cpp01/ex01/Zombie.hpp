@@ -6,7 +6,7 @@
 /*   By: akoaik <akoaik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/24 20:30:31 by akoaik            #+#    #+#             */
-/*   Updated: 2025/12/24 20:30:46 by akoaik           ###   ########.fr       */
+/*   Updated: 2025/12/25 17:58:14 by akoaik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,16 @@
 #include <string>
 
 class Zombie {
-private:
-    std::string name;
+    private:
+        std::string name;
 
-public:
-    Zombie();
-    Zombie(std::string name);
-    ~Zombie();
+    public:
+        Zombie();
+        Zombie(std::string name);
+        ~Zombie();
 
-    void announce(void);
-    void setName(std::string name);
+        void announce(void);
+        void setName(std::string name);
 };
 
 Zombie* zombieHorde(int N, std::string name);

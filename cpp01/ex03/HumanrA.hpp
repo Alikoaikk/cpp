@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanrA.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akoaik <akoaik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/24 20:31:32 by akoaik            #+#    #+#             */
-/*   Updated: 2025/12/25 18:01:00 by akoaik           ###   ########.fr       */
+/*   Created: 2025/12/25 19:29:58 by akoaik            #+#    #+#             */
+/*   Updated: 2025/12/25 22:16:45 by akoaik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Weapon.hpp"
 
-int main()
+class HumaneA
 {
-    int N = 5;
-    Zombie* horde = zombieHorde(N, "HordeZombie");
+    private : 
+        std::string name ; 
+        Weapon wp ;
 
-    for (int i = 0; i < N; i++)
-        horde[i].announce();
+    public : 
+        HumaneA();
 
-    delete[] horde;
-    return 0;
-}
+        void attack();
+        
+};
