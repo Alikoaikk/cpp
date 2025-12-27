@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanrA.hpp                                        :+:      :+:    :+:   */
+/*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akoaik <akoaik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/25 19:29:58 by akoaik            #+#    #+#             */
-/*   Updated: 2025/12/25 22:16:45 by akoaik           ###   ########.fr       */
+/*   Created: 2025/12/27 05:50:33 by akoaik            #+#    #+#             */
+/*   Updated: 2025/12/27 07:42:34 by akoaik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Weapon.hpp"
 
-class HumaneA
+class HumanB
 {
     private : 
         std::string name ; 
-        Weapon wp ;
+        Weapon *wp ;
 
     public : 
-        HumaneA();
-
+        HumanB(std::string name);
         void attack();
-        
+        void setWeapon(Weapon& w);
 };

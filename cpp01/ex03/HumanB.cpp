@@ -1,20 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Human.cpp                                          :+:      :+:    :+:   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akoaik <akoaik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/25 22:11:53 by akoaik            #+#    #+#             */
-/*   Updated: 2025/12/25 22:18:54 by akoaik           ###   ########.fr       */
+/*   Created: 2025/12/27 05:49:36 by akoaik            #+#    #+#             */
+/*   Updated: 2025/12/27 07:43:10 by akoaik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "HumanrA.hpp"
+#include "HumanB.hpp"
 
-void HumaneA::attack()
+HumanB::HumanB(std::string name)
+    :  name(name), wp(NULL)
+{}
+
+void HumanB::setWeapon(Weapon& w)
 {
-    std::cout << this->name << " attack with their "
-        << this->wp.getType()
-        << std::endl ;
+    this->wp = &w ;
+}
+
+void HumanB::attack()
+{
+    if (wp)
+    {
+        std::cout << this->name << "attack with their" 
+            << this->wp->getType() << std::endl ;
+    }
+    else 
+        std::cout << name << " has no weapon" << std::endl ;
 }
